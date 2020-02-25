@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# macOS High Sierra
+# specific alias
+alias fsi='f(){ find $1 -iname "${2}"; }; f' 											# find files, e.g. fsi . "*.txt"
+alias fbackup='f(){ find $1 -type f -iname "${2}" | tar -cf "${3}".tar.gz -T -; }; f' 	# find files and compress, e.g. fbackup . "*.txt" text
+alias frm='f(){ find $1 -type f -iname "${2}" -exec rm {} \;; }; f'                		# find and remove all files
+alias fcp='f(){ find $1 -iname "${2}" -exec rsync -R {} "${3}" \;; }; f' 				# copy files with file structure
+alias fclean='f(){ find $1 -type d -empty -delete; unset -f f; }; f'                  	# delete empty folder
+alias ftoday='f(){ find $1 -iname "${2}" -ctime 0 -print; }; f'     					# find today created files 
