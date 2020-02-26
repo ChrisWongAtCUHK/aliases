@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# macOS High Sierra
+# specific alias
+alias rninit='react-native init'
+alias rnstart='react-native start --reset-cache'
+alias rnri='react-native run-ios'
+alias rnra='react-native run-android'
