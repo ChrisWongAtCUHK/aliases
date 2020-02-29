@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# specific alias
+alias vinit='vagrant init'
+alias vup='vagrant up'
+alias vssh='vagrant ssh'
+alias vreload='vagrant reload'
