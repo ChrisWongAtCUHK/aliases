@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# history alias
+alias h='history | tail -50'
+alias hgrep='history | grep'
