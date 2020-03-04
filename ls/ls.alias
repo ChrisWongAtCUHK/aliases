@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# ls commands
+alias ll='ls -lhaG'
+alias lso='ls -lt' # order by date
+
