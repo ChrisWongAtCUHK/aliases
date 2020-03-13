@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# docker alias
+alias dockerps='docker ps'
+alias dps='docker ps'
+alias dc='docker container ls'
+alias dimages='docker images'
+alias dsp='docker system prune'
