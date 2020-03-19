@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# macOS High Sierra
+alias tcjf='tar -cjf'		# compress to .tar.bz2
+alias txjf='tar -xjf'		# extract .tar.bz2
+alias jtvf='tar -jtvf'		# list file of .tar.bz2
