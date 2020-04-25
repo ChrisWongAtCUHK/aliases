@@ -1,0 +1,7 @@
+# gitignore
+alias dnp='dotnet nuget push' 						# publish
+alias dpcr='dotnet pack --configuration Release'    # create the package
+
+# NUnit
+alias dnu='. ${ALIAS_PATH}/dotnet/scripts/unit-test-template.sh'
+alias dnt='dotnet test'
