@@ -1,0 +1,3 @@
+#!/bin/sh
+
+alias eject-usb='hdiutil eject -force' # eject USB device 
