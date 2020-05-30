@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# specific alias
+alias vp='vim -p'		# open files in tabs
+alias vo='vim -o'		# open files in split windows
+alias vO='vim -O'		# open files in vertical split windows
