@@ -1,3 +1,5 @@
 #!/bin/sh
 
-alias eject-usb='hdiutil eject -force' # eject USB device 
+alias dfi='df -ih'					   # view storage
+alias du1='du -hd1'					   # e.g. du1 .
+alias eject-usb='hdiutil eject -force' # e.g. eject-usb /Volumes/HD-LBU3
