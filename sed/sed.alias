@@ -1,4 +1,7 @@
 #!/bin/sh
 
 # specific alias
-alias sn='f() { sed -n "${1}p" $2; }; f' # e.g.  sn 3 "${HOME}/.bashrc"
+alias sn='f() { sed -n "${1}p" $2; }; f'        # e.g.  sn 3 "${HOME}/.alias/sed/sed.alias"
+alias sG='sed G'                                # double space a file
+alias sia='f() { sed "/${1}/{x;p;x;}" $2; }; f' # insert a blank line above every line which matches $1"
+alias sib='f() { sed "/${1}/G" $2; }; f'        # insert a blank line below every line which matches $1"
