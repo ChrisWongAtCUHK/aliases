@@ -1,0 +1,1 @@
+alias tcjf="tar -cjf"	# compress directory with bzip2
