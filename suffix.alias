@@ -1,0 +1,3 @@
+# suffix aliases
+alias -s txt=nvim
+alias -s json=code
