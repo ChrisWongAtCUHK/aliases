@@ -1,0 +1,4 @@
+# git aliases
+alias giti="git init ."
+alias gita="git add ."
+alias gitc="git commit -m 'Initial Commit'"
