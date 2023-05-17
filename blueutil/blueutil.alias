@@ -1,0 +1,4 @@
+#!/bin/sh
+# specific alias
+alias bu='blueutil' 											
+alias buc='blueutil --connected' 											
