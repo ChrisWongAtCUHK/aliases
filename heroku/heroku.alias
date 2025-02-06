@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Heroku
+
+# specific alias
+alias h='heroku'
+alias hi='heroku info'
