@@ -7,3 +7,4 @@ alias herokuhelp='cat ~/.alias/heroku/heroku.alias'
 alias h='heroku'
 alias hi='heroku info'
 alias hdeploy='git push heroku main'  #default
+alias hrename='heroku apps:rename'    # hrename test-project
