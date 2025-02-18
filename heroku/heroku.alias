@@ -5,6 +5,15 @@
 # specific alias
 alias herokuhelp='cat ~/.alias/heroku/heroku.alias'
 alias h='heroku'
+alias ha='heroku apps'
+alias hd='heroku apps:destroy'
 alias hi='heroku info'
 alias hdeploy='git push heroku main'  #default
 alias hrename='heroku apps:rename'    # hrename test-project
+alias hrb='heroku run bash'
+
+# docker
+alias hcl='heroku container:login'
+alias hssc='heroku stack:set container'
+alias hcpw='heroku container:push web'
+alias hdrw='heroku container:release web'
