@@ -2,10 +2,14 @@
 
 # docker alias
 alias dockerhelp='cat ~/.alias/docker/docker.alias'
+alias d='docker'
 alias dockerps='docker ps'
+alias dcname='docker ps -a | awk "{print \$NF}"'
 alias dps='docker ps'
 alias dc='docker container ls'
 alias dimages='docker images'
 alias dsp='docker system prune'
 alias dbuild='docker build -t'						# docker build -t <TAG_NAME> .
 alias dockersh='f() { docker run -i -t $1 sh };f'
+alias dvolume='docker volume'
+
