@@ -1,3 +1,6 @@
+alias dn='dotnet'
+alias dngitignore='dotnet new gitignore'
+
 # gitignore
 alias dnp='dotnet nuget push' 						# publish
 alias dpcr='dotnet pack --configuration Release'    # create the package
