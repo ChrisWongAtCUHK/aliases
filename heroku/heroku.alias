@@ -8,8 +8,8 @@ alias h='heroku'
 alias ha='heroku apps'
 alias hd='heroku apps:destroy'
 alias hi='heroku info'
-alias hdeploy='git push heroku main'  #default
-alias hrename='heroku apps:rename'    # hrename test-project
+alias hdeploy='git push heroku main' #default
+alias hrename='heroku apps:rename'   # hrename test-project
 alias hrb='heroku run bash'
 
 # docker
@@ -18,5 +18,26 @@ alias hssc='heroku stack:set container'
 alias hcpw='heroku container:push web'
 alias hdrw='heroku container:release web'
 
-# RabbitMQ
-alias mqsend='curl "$(heroku info -s | grep web_url | cut -d= -f2)rabbitmq/sendTopic?routingKey=hk.news&name=Chris&msg=QuickTest"'
+# RabbitMQ 發送函數
+mqsend() {
+  # 若要相容 sh，建議直接使用變數名（不加 local）或改用 bash
+  _input_msg="${1:-QuickTest}"
+
+  # 使用 Python 進行 URL Encoding，確保 $input_msg 內的單引號不會破壞命令
+  _encoded_msg=$(python3 -c "import urllib.parse, sys; print(urllib.parse.quote(sys.stdin.read().strip()))" <<< "$_input_msg")
+
+  # 取得 Heroku URL 並移除結尾斜槓以便後續拼接
+  _url=$(heroku info -s | grep web_url | cut -d= -f2 | sed 's/\/$//')
+
+  if [ -z "$_url" ]; then
+    echo "Error: Could not get Heroku URL."
+    return 1
+  fi
+
+  echo "Sending to Heroku: $_input_msg"
+
+  # 執行 curl 並確保 URL 完整引用
+  curl -s "${_url}/rabbitmq/sendTopic?routingKey=hk.news&name=Chris&msg=${_encoded_msg}"
+
+  echo "\nDone."
+}
