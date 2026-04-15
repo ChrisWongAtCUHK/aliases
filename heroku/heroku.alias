@@ -17,3 +17,6 @@ alias hcl='heroku container:login'
 alias hssc='heroku stack:set container'
 alias hcpw='heroku container:push web'
 alias hdrw='heroku container:release web'
+
+# RabbitMQ
+alias mqsend='curl "$(heroku info -s | grep web_url | cut -d= -f2)rabbitmq/sendTopic?routingKey=hk.news&name=Chris&msg=QuickTest"'
