@@ -19,6 +19,7 @@ alias hcpw='heroku container:push web'
 alias hdrw='heroku container:release web'
 
 # RabbitMQ 發送函數
+unalias  mqsend 2>/dev/null
 mqsend() {
   # 若要相容 sh，建議直接使用變數名（不加 local）或改用 bash
   _input_msg="${1:-QuickTest}"
